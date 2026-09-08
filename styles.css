@@ -977,3 +977,21 @@ footer b {
 
 .zone-current{display:block;font-size:13px;font-weight:400;color:var(--tint-ink);margin-top:8px;overflow-wrap:anywhere}
 @media(max-width:360px){.form-row:has(input[type="date"]){grid-template-columns:1fr}}
+
+/* Keep the calendar coordinates visible throughout a long selection. */
+.grid-scroll{position:relative;overflow:auto;max-height:min(440px,60vh);padding:0;isolation:isolate;scroll-padding:58px 8px 8px 84px;overscroll-behavior:contain}
+.time-grid{min-width:100%;width:max-content;grid-auto-rows:minmax(46px,auto);gap:7px}
+.day-label{position:sticky;top:0;z-index:3;background:var(--card);padding:9px 4px;box-shadow:0 4px 0 var(--card)}
+.hour-label{position:sticky;left:0;z-index:2;background:var(--card);padding:4px 6px;box-shadow:4px 0 0 var(--card);flex-direction:column;align-items:flex-start;justify-content:center;white-space:nowrap}
+.hour-label small{font-size:10px;line-height:1.2}
+.grid-corner{position:sticky;top:0;left:0;z-index:4;background:var(--card);display:flex;align-items:center;padding:6px;color:var(--muted);font-size:12px;box-shadow:4px 4px 0 var(--card)}
+.time-cell{touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair;scroll-margin:60px 10px 10px 86px}
+.empty-slot{background:var(--paper);border-radius:9px;min-height:46px}
+.is-dragging{user-select:none;cursor:crosshair}
+.timezone label{font-size:11px;letter-spacing:.7px;color:var(--tint-ink)}
+.timezone select{margin:7px 0;max-width:100%}
+.timezone #my-zone{display:block;margin-top:4px;min-height:44px}
+.timezone .form-help{margin:4px 0 0}
+.grid-help{font-size:13px;line-height:1.5;color:var(--muted);margin:12px 0}
+.result-zone{overflow-wrap:anywhere;font-size:12px!important}
+@media(max-width:760px){.grid-scroll{max-height:min(410px,58vh)}.time-grid{gap:6px}.grid-help{font-size:12px}}

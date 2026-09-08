@@ -68,3 +68,7 @@ With live configuration enabled, automated checks report 12 passed and one local
 ## Public deployment
 
 Published at https://nr-sbe.github.io/yo-you-down/ from nr-sbe/yo-you-down. GitHub Actions run 34277461316 passed the behavior tests, PostgreSQL schema checks, static build, live database health check, and Pages deployment. The public page shows Live sharing and successfully created a plan and saved availability against Supabase.
+
+## Drag selection, sticky labels, and viewer time zones
+
+17 automated checks: 16 passed, one existing local-only adapter check skipped with live configuration. New tests cover rectangle add/erase/reverse/shrink semantics, preserved slot indexes across date rollovers, half-hour and quarter-hour offsets, source DST gaps/repeats, and receiver repeated-hour offset labels. Browser checks exercised a four-cell rectangle, single click, keyboard Space, saving, unchanged selections after zone switching, and a 168-slot grid. At 390px, two-axis scrolling retained the date header and time column; edge dragging scrolled and selected 28 slots. Switching those slots to Nepal time preserved all 28 and saved successfully to Supabase. No page overflow at 390px or 320px in the checked views. Physical touch/pen devices are not verified.

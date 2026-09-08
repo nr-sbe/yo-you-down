@@ -49,7 +49,7 @@ Desktop dark form, desktop light grid, and mobile dark grid were also inspected 
 
 ## Not exercised
 
-- Personal GitHub repository creation and actual GitHub Pages publication: ready to do, not performed.
+- GitHub repository and Pages deployment are now complete; see deployment result below.
 - Physical two-device testing and a full independent hosted security audit remain unperformed. Hosted schema, health, independent identities, and polling are now exercised as noted below.
 - Safari, Firefox, physical iOS/Android devices, screen readers, and a full independent accessibility audit.
 
@@ -64,3 +64,7 @@ Rechecked the Outfit/Phosphor midnight-blue and citrus design in dark and light 
 Installed the schema in the personal Free Supabase project and passed the live HTTP health check. Browser tests created a real plan, saved Test Alex on 127.0.0.1 and Test Sam on localhost (separate browser storage origins), and observed both responses together through polling. Updating a response to unavailable was also exercised. This verifies independent browser identities against the hosted database, not two physical devices.
 
 With live configuration enabled, automated checks report 12 passed and one local-only adapter check intentionally skipped; the earlier unconfigured run passed all 13.
+
+## Public deployment
+
+Published at https://nr-sbe.github.io/yo-you-down/ from nr-sbe/yo-you-down. GitHub Actions run 34277461316 passed the behavior tests, PostgreSQL schema checks, static build, live database health check, and Pages deployment. The public page shows Live sharing and successfully created a plan and saved availability against Supabase.
